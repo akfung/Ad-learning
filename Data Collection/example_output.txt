@@ -1,0 +1,1950 @@
+==== Query
+  curl -i -X GET \
+   "https://graph.facebook.com/v6.0/ads_archive?fields=ID%2Cad_snapshot_url%2Cad_creative_body%2Cpage_name%2Cdemographic_distribution%2Cimpressions%2Ccurrency%2Cspend&search_terms=california&ad_reached_countries=US&access_token=<access token sanitized>"
+==== Access Token Info
+  {
+    "perms": [
+      "public_profile"
+    ],
+    "user_id": "10157580874514069",
+    "app_id": 1135283763479048
+  }
+==== Parameters
+- Query Parameters
+
+
+  {
+    "fields": "ID,ad_snapshot_url,ad_creative_body,page_name,demographic_distribution,impressions,currency,spend",
+    "search_terms": "california",
+    "ad_reached_countries": "US"
+  }
+- POST Parameters
+
+
+  {}
+==== Response
+  {
+    "data": [
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=555215822069518&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "Patagonia grantee Los Angeles County Arboretum & Botanic Garden is offering a digital exhibition showcasing botanic illustrations from their library’s Rare Book Room. Check the exhibition out on their website to view and learn about plant communities in southern California's mediterranean climate.",
+        "page_name": "Patagonia",
+        "demographic_distribution": [
+          {
+            "percentage": "0.035339",
+            "age": "35-44",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.040734",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.002158",
+            "age": "55-64",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.003777",
+            "age": "25-34",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.004451",
+            "age": "35-44",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.003507",
+            "age": "65+",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.040329",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.03372",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.018883",
+            "age": "18-24",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.137712",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.003642",
+            "age": "45-54",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.00526",
+            "age": "18-24",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.112625",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.149987",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.19045",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.180065",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.036552",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.000809",
+            "age": "18-24",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "10000",
+          "upper_bound": "14999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "555215822069518"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=867420843724977&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "Coastal Liberals from California & New York want to get rid of the electoral college. Even former Democrat presidential candidates like Elizabeth Warren and Bernie Sanders have pushed for it. We CANNOT let them silence your vote. Sign our petition to protect the electoral college >>",
+        "page_name": "Deb Fischer",
+        "demographic_distribution": [
+          {
+            "percentage": "0.24359",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.070513",
+            "age": "35-44",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.166667",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.179487",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.070513",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.00641",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.121795",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.089744",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.038462",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.00641",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.00641",
+            "age": "55-64",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "0",
+          "upper_bound": "999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "867420843724977"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=2519928954926013&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "Coastal Liberals from California & New York want to get rid of the electoral college. Even former Democrat presidential candidates like Elizabeth Warren and Bernie Sanders have pushed for it. We CANNOT let them silence your vote. Sign our petition to protect the electoral college >>",
+        "page_name": "Deb Fischer",
+        "demographic_distribution": [
+          {
+            "percentage": "0.145188",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.106036",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.203915",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.017945",
+            "age": "18-24",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.11093",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.159869",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.083197",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.058728",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.063622",
+            "age": "35-44",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.026101",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.003263",
+            "age": "55-64",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.001631",
+            "age": "18-24",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.017945",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.001631",
+            "age": "65+",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "0",
+          "upper_bound": "999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "2519928954926013"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=2593946477486352&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "Join us Friday, April 24 @ 10:30 a.m. / 1:30 p.m.\nFarmworker Justice presents a Facebook series “THE STATE OF FARMWORKERS IN A COVID-19 ERA”\nGuest:  Steven Hernandez, Mayor of City of Coachella, California\nFarmworker Justice is collaborating with farmworker-serving organizations and many other organizations to help farmworker families confront the very serious challenges caused by COVID-19 pandemic.",
+        "page_name": "Farmworker Justice",
+        "demographic_distribution": [
+          {
+            "percentage": "0.064516",
+            "age": "35-44",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.032258",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.212903",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.212903",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.032258",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.090323",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.16129",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.083871",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.090323",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.006452",
+            "age": "65+",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.006452",
+            "age": "35-44",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.006452",
+            "age": "25-34",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "0",
+          "upper_bound": "999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "2593946477486352"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=168219281164659&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "John Lovell and the California Narcotic Officers' Association know that at a time of COVID-19, high concentrations of at-risk populations put everyone in jeopardy.",
+        "page_name": "High View Strategies",
+        "demographic_distribution": [
+          {
+            "percentage": "0.041667",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.125",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.1875",
+            "age": "35-44",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.166667",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.0625",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.0625",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.083333",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.0625",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.104167",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.020833",
+            "age": "35-44",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.020833",
+            "age": "55-64",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.041667",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.020833",
+            "age": "18-24",
+            "gender": "male"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "0",
+          "upper_bound": "999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "168219281164659"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=1779855008813334&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "The federal government’s response to COVID-19 must continue. Additional legislation needs to include support for students, medical centers and institutions of higher ed.",
+        "page_name": "UC Advocacy Network",
+        "demographic_distribution": [
+          {
+            "percentage": "0.333333",
+            "age": "18-24",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.333333",
+            "age": "18-24",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.333333",
+            "age": "25-34",
+            "gender": "male"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "0",
+          "upper_bound": "999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "1779855008813334"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=2795840997179759&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "Many of our students continue to be economically impacted by the COVID-19 crisis, Congress must continue to provide support.",
+        "page_name": "UC Advocacy Network",
+        "demographic_distribution": [
+          {
+            "percentage": "0.5",
+            "age": "18-24",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.5",
+            "age": "18-24",
+            "gender": "male"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "0",
+          "upper_bound": "999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "2795840997179759"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=3341904665837681&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "Future COVID-19 federal spending needs to support the communities that institutions for higher ed serve, including students and medical professionals.",
+        "page_name": "UC Advocacy Network",
+        "demographic_distribution": [
+          {
+            "percentage": "0.333333",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.333333",
+            "age": "18-24",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.333333",
+            "age": "25-34",
+            "gender": "male"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "0",
+          "upper_bound": "999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "3341904665837681"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=735531653652907&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "A California surfer is in handcuffs after enjoying empty waves, yet repeat child abusers are able to benefit from the state's new $0 cash bail emergency mandate and will be released back into circulation...\n\nReally, Gavin Newsom???\n\n#CADeservesBetter",
+        "page_name": "Senator Shannon Grove",
+        "demographic_distribution": [
+          {
+            "percentage": "0.107962",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.002024",
+            "age": "45-54",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.003374",
+            "age": "65+",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.000675",
+            "age": "18-24",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.002024",
+            "age": "25-34",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.005398",
+            "age": "18-24",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.012146",
+            "age": "18-24",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.009447",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.044534",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.226046",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.00135",
+            "age": "35-44",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.119433",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.021592",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.147773",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.045209",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.084345",
+            "age": "35-44",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.165317",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.00135",
+            "age": "55-64",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "1000",
+          "upper_bound": "1999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "735531653652907"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=525079154831669&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "{{product.brand}}",
+        "page_name": "Carl DeMaio",
+        "demographic_distribution": [
+          {
+            "percentage": "0.217623",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.015487",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.004806",
+            "age": "65+",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.002403",
+            "age": "45-54",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.001602",
+            "age": "55-64",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.01255",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.002937",
+            "age": "18-24",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.002937",
+            "age": "18-24",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.075033",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.105474",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.22777",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.120694",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.056342",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.039519",
+            "age": "35-44",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.113752",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.000801",
+            "age": "35-44",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.000267",
+            "age": "25-34",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "4000",
+          "upper_bound": "4999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "525079154831669"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=536010263944757&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "{{product.brand}}",
+        "page_name": "Carl DeMaio",
+        "demographic_distribution": [
+          {
+            "percentage": "0.191971",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.145072",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.172099",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.097377",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.06558",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.049285",
+            "age": "35-44",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.114467",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.004372",
+            "age": "18-24",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.098172",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.02663",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.021463",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.004769",
+            "age": "18-24",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.00159",
+            "age": "65+",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.003975",
+            "age": "55-64",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.002385",
+            "age": "45-54",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.000795",
+            "age": "35-44",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "2000",
+          "upper_bound": "2999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "536010263944757"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=168034437856210&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "{{product.brand}}",
+        "page_name": "Carl DeMaio",
+        "demographic_distribution": [
+          {
+            "percentage": "0.113438",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.184991",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.239092",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.118674",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.143106",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.069808",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.055846",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.010471",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.04014",
+            "age": "35-44",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.001745",
+            "age": "45-54",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.008726",
+            "age": "55-64",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.008726",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.001745",
+            "age": "18-24",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.001745",
+            "age": "18-24",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.001745",
+            "age": "35-44",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "0",
+          "upper_bound": "999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "168034437856210"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=612042769383713&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "COVID-19 more deadly among African American and Latino communities due to diabetes prevalence and limited access to quality health care.",
+        "page_name": "California Health Equity Alliance",
+        "demographic_distribution": [
+          {
+            "percentage": "0.218029",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.100629",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.067086",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.104822",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.146751",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.111111",
+            "age": "35-44",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.171908",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.073375",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.002096",
+            "age": "45-54",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.002096",
+            "age": "25-34",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.002096",
+            "age": "35-44",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "1000",
+          "upper_bound": "1999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "612042769383713"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=341716640133730&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "Now, more than ever,,,WE all need to LIVE WE...WE can not afford to be about ME. The Covid-19 should not only be bringing the USA together, but should bring the WORLD together. 🌎🌏\n\nhttps://bit.ly/2VQ8CNT\n\nAt the Live We store there are various ways to express that you Live WE... 👨🏾‍🤝‍👨🏾👨🏾‍🤝‍👨🏽👨🏻‍🤝‍👨🏻👨🏼‍🤝‍👨🏻👩🏿‍🤝‍🧑🏿👩🏾‍🤝‍🧑🏼...\nSee More\n\nhttps://bit.ly/2VQ8CNT\n\nWe are now hearing politicians such as Newsom in California and Cuomo in New York use terms such as Me to We and We not Me... Bernie Sanders says Not me. Us..👩🧑👩‍🦱🧔👮‍♀️🧕👳‍♂️👳‍♀️💂‍♀️👩‍⚕️👨‍🎓👷‍♀️👮‍♂️👵🧓👨‍🦰👩‍⚖️🤶🤴🤵👨‍🚒👨‍👩‍👧‍👧\n\nhttps://bit.ly/2VQ8CNT",
+        "page_name": "Live WE, Not ME",
+        "demographic_distribution": [
+          {
+            "percentage": "0.090395",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.062147",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.101695",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.096045",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.118644",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.073446",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.062147",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.039548",
+            "age": "35-44",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.028249",
+            "age": "18-24",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.158192",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.033898",
+            "age": "18-24",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.129944",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.00565",
+            "age": "55-64",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "0",
+          "upper_bound": "999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "341716640133730"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=615105382423302&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "Did you know that Census 2010 missed approx. 400,000 young Latino children (age 0-4) with California, Texas, Florida, Arizona and New York experiencing the highest undercount? We can’t afford to make the same mistake twice. Count all children in #Census2020! #HazmeContar #CountUsIn",
+        "page_name": "Asian Law Alliance",
+        "demographic_distribution": [
+          {
+            "percentage": "0.132353",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.191176",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.095588",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.139706",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.080882",
+            "age": "18-24",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.235294",
+            "age": "18-24",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.029412",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.080882",
+            "age": "35-44",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.007353",
+            "age": "35-44",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.007353",
+            "age": "25-34",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "0",
+          "upper_bound": "999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "615105382423302"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=268228614305303&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "CALIFORNIA FISCAL ABYSS\nThere’s a road map showing us where fiscal conditions are going in the state of California for both state and local governments. And it’s not a pretty destination. Having worked directly for Governor Schwarzenegger as we entered the great recession in 2007 - 08, I had a ringside seat as we advised the Governor and  watched CA’s finances melt down and were forced to make extremely difficult decisions on how to cut state expenditures. We had the unenviable task task of having to advise the Governor  on how to rollback state programs including education, health and welfare, public safety,  transportation and all the things that people come to depend on in their lives here in the state.\n\nI don’t envy Governor Newsom, his Department of Finance or his cabinet which I served in last time we experienced this.  But I definitely know what they’re going through, what type of fiscal drills they’re doing and what programs are being put on the chopping block in order to keep the state solvent. Let’s hope that the governor catches a break and it’s not as bad as it’s looking it’s going to be. \n\nThe next major shot across the bow comes in two weeks when the Governor will deliver his May revise which will simply be a placeholder on what the final budget looks like",
+        "page_name": "Sheehy Strategy Group",
+        "demographic_distribution": [
+          {
+            "percentage": "0.402244",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.057692",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.445513",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.054487",
+            "age": "35-44",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.011218",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.008013",
+            "age": "25-34",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.011218",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.003205",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.004808",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.001603",
+            "age": "45-54",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "0",
+          "upper_bound": "999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "268228614305303"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=231918904758406&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "More of ☀️, Less of 🌫. Sign the petition to tell your legislators our state needs to build more clean energy storage now.",
+        "page_name": "CA Needs Energy Storage",
+        "demographic_distribution": [
+          {
+            "percentage": "0.243144",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.041438",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.000914",
+            "age": "45-54",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.001523",
+            "age": "25-34",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.001828",
+            "age": "18-24",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.002133",
+            "age": "55-64",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.001828",
+            "age": "65+",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.053626",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.085923",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.166971",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.02468",
+            "age": "35-44",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.071907",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.039305",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.053931",
+            "age": "18-24",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.042048",
+            "age": "18-24",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.072517",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.095673",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.000609",
+            "age": "35-44",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "3000",
+          "upper_bound": "3999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "100",
+          "upper_bound": "199"
+        },
+        "id": "231918904758406"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=1212631232462738&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "In addition to creating thousands of jobs, clean energy storage projects will provide hundreds of millions of dollars in tax revenues to local governments as cities throughout our state experience growing budget shortfalls due to the current crisis.\n \nTell your legislators: We need clean energy jobs now!",
+        "page_name": "CA Needs Energy Storage",
+        "demographic_distribution": [
+          {
+            "percentage": "0.244604",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.201439",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.136691",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.057554",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.115108",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.021583",
+            "age": "35-44",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.028777",
+            "age": "18-24",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.064748",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.064748",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.021583",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.007194",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.014388",
+            "age": "18-24",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.021583",
+            "age": "25-34",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "0",
+          "upper_bound": "999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "1212631232462738"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=640815730106194&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "In addition to creating thousands of jobs, clean energy storage projects will provide hundreds of millions of dollars in tax revenues to local governments as cities throughout our state experience growing budget shortfalls due to the current crisis.\n \nTell your legislators: We need clean energy jobs now!",
+        "page_name": "CA Needs Energy Storage",
+        "demographic_distribution": [
+          {
+            "percentage": "0.176471",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.458824",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.070588",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.188235",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.011765",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.047059",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.035294",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.011765",
+            "age": "65+",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "0",
+          "upper_bound": "999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "640815730106194"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=826278274447504&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "More of ☀️, Less of 🌫. Sign the petition to tell your legislators our state needs to build more clean energy storage now.",
+        "page_name": "CA Needs Energy Storage",
+        "demographic_distribution": [
+          {
+            "percentage": "0.190476",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.52381",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.018519",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.050265",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.137566",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.039683",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.018519",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.002646",
+            "age": "35-44",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.002646",
+            "age": "55-64",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.005291",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.002646",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.005291",
+            "age": "65+",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.002646",
+            "age": "35-44",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "0",
+          "upper_bound": "999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "826278274447504"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=266576257717807&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "In addition to creating thousands of jobs, clean energy storage projects will provide hundreds of millions of dollars in tax revenues to local governments as cities throughout our state experience growing budget shortfalls due to the current crisis.\n \nTell your legislators: We need clean energy jobs now!",
+        "page_name": "CA Needs Energy Storage",
+        "demographic_distribution": [
+          {
+            "percentage": "0.0125",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.1625",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.3625",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.175",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.0375",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.075",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.1125",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.025",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.0125",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.0125",
+            "age": "18-24",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.0125",
+            "age": "65+",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "0",
+          "upper_bound": "999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "266576257717807"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=690497478451632&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "More of ☀️, Less of 🌫. Sign the petition to tell your legislators our state needs to build more clean energy storage now.",
+        "page_name": "CA Needs Energy Storage",
+        "demographic_distribution": [
+          {
+            "percentage": "0.335684",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.06347",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.073343",
+            "age": "18-24",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.181946",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.047955",
+            "age": "18-24",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.050776",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.03244",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.047955",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.040903",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.077574",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.026798",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.00141",
+            "age": "25-34",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.018336",
+            "age": "35-44",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.00141",
+            "age": "45-54",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "0",
+          "upper_bound": "999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "690497478451632"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=571429816821441&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "In addition to creating thousands of jobs, clean energy storage projects will provide hundreds of millions of dollars in tax revenues to local governments as cities throughout our state experience growing budget shortfalls due to the current crisis.\n \nTell your legislators: We need clean energy jobs now!",
+        "page_name": "CA Needs Energy Storage",
+        "demographic_distribution": [
+          {
+            "percentage": "0.141026",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.435897",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.089744",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.179487",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.141026",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.012821",
+            "age": "45-54",
+            "gender": "male"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "0",
+          "upper_bound": "999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "571429816821441"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=2758880780876254&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "More of ☀️, Less of 🌫. Sign the petition to tell your legislators our state needs to build more clean energy storage now.",
+        "page_name": "CA Needs Energy Storage",
+        "demographic_distribution": [
+          {
+            "percentage": "0.109811",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.0018",
+            "age": "25-34",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.0009",
+            "age": "18-24",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.008101",
+            "age": "35-44",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.026103",
+            "age": "18-24",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.023402",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.018902",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.019802",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.057606",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.369937",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.078308",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.0036",
+            "age": "65+",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.043204",
+            "age": "18-24",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.0018",
+            "age": "55-64",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.049505",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.186319",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.0009",
+            "age": "35-44",
+            "gender": "unknown"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "1000",
+          "upper_bound": "1999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "2758880780876254"
+      },
+      {
+        "ad_snapshot_url": "https://www.facebook.com/ads/archive/render_ad/?id=546457179589951&access_token=EAAQIiNlxAggBAMOI2YYdnhe2BXz17ZBfTdLgJcg3nleKsXIckHOeMKLEdQZBWIC1JFURETJScZBKKPMfWglsqOJOCUXZBwqvCrspUh8oXTtpkv3ABnTD0nQSYLsW99ZCcFv8hZAJGENj1R3MDUkb572brZCSwdFdxy56SoLNw56AltdRX7PHFmTgbwA1ZCY7ObFZBGhrawKYSL7yvprF6uQrkZBCnO4XlKM1GRRLVjtNwXYgZDZD",
+        "ad_creative_body": "In addition to creating thousands of jobs, clean energy storage projects will provide hundreds of millions of dollars in tax revenues to local governments as cities throughout our state experience growing budget shortfalls due to the current crisis.\n \nTell your legislators: We need clean energy jobs now!",
+        "page_name": "CA Needs Energy Storage",
+        "demographic_distribution": [
+          {
+            "percentage": "0.113924",
+            "age": "65+",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.094937",
+            "age": "45-54",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.335443",
+            "age": "65+",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.297468",
+            "age": "55-64",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.025316",
+            "age": "45-54",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.006329",
+            "age": "65+",
+            "gender": "unknown"
+          },
+          {
+            "percentage": "0.044304",
+            "age": "55-64",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.025316",
+            "age": "35-44",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.012658",
+            "age": "25-34",
+            "gender": "female"
+          },
+          {
+            "percentage": "0.018987",
+            "age": "25-34",
+            "gender": "male"
+          },
+          {
+            "percentage": "0.025316",
+            "age": "35-44",
+            "gender": "male"
+          }
+        ],
+        "impressions": {
+          "lower_bound": "0",
+          "upper_bound": "999"
+        },
+        "currency": "USD",
+        "spend": {
+          "lower_bound": "0",
+          "upper_bound": "99"
+        },
+        "id": "546457179589951"
+      }
+    ],
+    "paging": "--sanitized--",
+    "__debug__": {
+      "messages": [
+        {
+          "message": "The ID field does not exist on the ArchivedAd object.",
+          "type": "info"
+        }
+      ]
+    }
+  }
+==== Debug Information from Graph API Explorer
+- https://developers.facebook.com/tools/explorer?method=GET&path=ads_archive%3Ffields%3DID%2Cad_snapshot_url%2Cad_creative_body%2Cpage_name%2Cdemographic_distribution%2Cimpressions%2Ccurrency%2Cspend%26search_terms%3Dcalifornia%26ad_reached_countries%3DUS&version=v6.0
