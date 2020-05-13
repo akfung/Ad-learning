@@ -14,7 +14,7 @@
     <!-- Bootstrap core CSS --> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Custom CSS-->
-    <link href="../Static/CSS/styles.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='CSS/styles.css') }}" rel="stylesheet">
   </head>
 
   <body>
@@ -89,7 +89,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                {% include icons/placeholder.svg width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail" %}
+                placeholder
                 <div class="card-body">
                   <p class="card-text">Facebook Ad Data</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -104,7 +104,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                {% include icons/placeholder.svg width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail" %}
+                placeholder
                 <div class="card-body">
                   <p class="card-text">Ad analysis</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -120,7 +120,7 @@
 
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                {% include icons/placeholder.svg width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail" %}
+                placeholder
                 <div class="card-body">
                   <p class="card-text">Embedding Diagram</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -135,7 +135,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                {% include icons/placeholder.svg width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail" %}
+                placeholder
                 <div class="card-body">
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -150,7 +150,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                {% include icons/placeholder.svg width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail" %}
+                placeholder
                 <div class="card-body">
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -166,7 +166,7 @@
 
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                {% include icons/placeholder.svg width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail" %}
+                placeholder
                 <div class="card-body">
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -181,7 +181,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                {% include icons/placeholder.svg width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail" %}
+                placeholder
                 <div class="card-body">
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -196,7 +196,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                {% include icons/placeholder.svg width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail" %}
+                placeholder
                 <div class="card-body">
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -221,7 +221,6 @@
           <a href="#">Back to top</a>
         </p>
         <p>Website created by Amos Fung</p>
-        <p>New to Bootstrap? <a href="{{ site.url }}/">Visit the homepage</a> or read our <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/">getting started guide</a>.</p>
       </div>
     </footer>
 
