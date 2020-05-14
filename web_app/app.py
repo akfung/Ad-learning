@@ -30,23 +30,23 @@ db = SQLAlchemy(app)
 class political_ads(db.Model):
     __tablename__ = 'political_ads'
     id = db.Column(db.Integer, primary_key=True)
-    Ad_ID = db.Column(db.Integer)
-    Ad_URL = db.Column(db.String(200))
-    Ad_Text = db.Column(db.String(200))
-    Hosted_Page = db.Column(db.String(200))
+    AdID = db.Column(db.Integer)
+    AdURL = db.Column(db.String(200))
+    AdText = db.Column(db.String(200))
+    HostedPage = db.Column(db.String(200))
     Impressions = db.Column(db.String(200))
     Currency = db.Column(db.String(200))
-    Ad_Spending = db.Column(db.String(200))
+    AdSpending = db.Column(db.String(200))
     #initialization functions
     def __init__(self, id, Ad_ID, Ad_URL, Ad_Text, Hosted_Page, Impressions, Currency, Ad_Spending):
         self.id = id
-        self.Ad_ID = Ad_ID
-        self.Ad_URL = Ad_URL
-        self.Ad_Text = Ad_Text
-        self.Hosted_Page = Hosted_Page
+        self.AdID = AdID
+        self.AdURL = AdURL
+        self.AdText = AdText
+        self.HostedPage = HostedPage
         self.Impressions = Impressions
         self.Currency = Currency
-        self.Ad_Spending = Ad_Spending
+        self.AdSpending = AdSpending
 
 
 # create route that renders index.html template
@@ -60,29 +60,41 @@ def home():
 
     return render_template("index.html")
 
-
-
 #route that goes to visualization page
-@app.route("/visualization", methods=["GET"])
+@app.route("/visualization")
 def visualization():
-    _data = [{
-        "type": "scattergeo",
-        "locationmode": "USA-states",
-        "lat": lat,
-        "lon": lon,
-        "text": hover_text,
-        "hoverinfo": "text",
-        "marker": {
-            "size": 50,
-            "line": {
-                "color": "rgb(8,8,8)",
-                "width": 1
-            },
-        }
-    }]
     return render_template("ad_visualizations.html")
 
-#route that adds to db
+
+# set up responding to api requests to postgres server
+@app.route("/api/ads")
+def api_response():
+    #query database and return list of lists with results
+    results = db.session.query(political_ads.AdID, political_ads.AdURL, political_ads.AdText, political_ads.HostedPage,\
+        political_ads.Impressions, political_ads.Currency, political_ads.AdSpending).all()
+    Ad_ID = [result[0] for result in results]
+    Ad_URL = [result[1] for result in results]
+    Ad_Text = [result[2] for result in results]
+    Hosted_Page = [result[3] for result in results]
+    Impressions = [result[4] for result in results]
+    Currency = [result[5] for result in results]
+    Spending = [result[6] for result in results]
+
+    #the json responde to an API query from app.js, results are already in plotly format
+    ad_data = [{
+        "Ad_ID": Ad_ID,
+        "Ad_URL": Ad_URL,
+        "Ad_Text": Ad_Text,
+        "Hosted_Page": Hosted_Page,
+        "Impressions": Impressions,
+        "Currency": Currency,
+        "Spending": Spending
+    }]
+
+    return jsonify(ad_data) #return 
+    
+
+#route that querries db
 @app.route("/querryDB", methods=["GET", "POST"])
 def send():
     if request.method == "POST":

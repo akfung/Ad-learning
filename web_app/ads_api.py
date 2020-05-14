@@ -65,13 +65,13 @@ class fb_ad_api:
     # make pandas df
     def make_df(self):
         results_df = pd.DataFrame({
-            'Ad ID': self.id,
-            'Ad URL': self.ad_snapshot_url,
-            'Ad Text': self.ad_creative_body,
-            'Hosted Page': self.page_name,
+            'AdID': self.id,
+            'AdURL': self.ad_snapshot_url,
+            'AdText': self.ad_creative_body,
+            'HostedPage': self.page_name,
             'Impressions': self.impressions,
             'Currency': self.currency,
-            'Ad Spending': self.spend
+            'AdSpending': self.spend
         })
 
         return results_df
