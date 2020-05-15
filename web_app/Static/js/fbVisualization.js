@@ -4,8 +4,17 @@ function generalAdData(){
     d3.json(url).then(function(response) {
         console.log(response);
 
-        // set plotly traces
+        // generate traces
+        let traceBar = { //bar trace
+            y: findBarData(0).IDs,
+            x: findBarData(0).values,
+            type: 'bar'
+        };
+
+        Plotly.newPlot('bar', [traceBar], barLayout);
 
     })
 
 };
+
+ 

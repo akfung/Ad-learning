@@ -14,7 +14,7 @@ import ads_api #module for calling the facebook ads library API
 app = Flask(__name__)
 
 #set different database depending on dev or heroku database
-ENV = 'heroku'
+ENV = 'dev'
 
 if ENV == 'dev':
     app.debug = True
@@ -37,6 +37,10 @@ class political_ads(db.Model):
     Impressions = db.Column(db.String(200))
     Currency = db.Column(db.String(200))
     AdSpending = db.Column(db.String(200))
+    toxicity = db.Column(db.Integer)
+    identityAttack = db.Column(db.Integer)
+    insult = db.Column(db.Integer)
+    positivity = db.Column(db.Integer)
     #initialization functions
     def __init__(self, id, Ad_ID, Ad_URL, Ad_Text, Hosted_Page, Impressions, Currency, Ad_Spending):
         self.id = id
@@ -47,6 +51,10 @@ class political_ads(db.Model):
         self.Impressions = Impressions
         self.Currency = Currency
         self.AdSpending = AdSpending
+        self.toxicity = toxicity
+        self.identityAttack = identityAttack
+        self.insult = insult
+        self.positivity = positivity
 
 
 # create route that renders index.html template
@@ -54,9 +62,9 @@ class political_ads(db.Model):
 def home():
     #on load clear previous tables and populate the database with some ad results
     db.drop_all()
-    # db.create_all()
-    csv_data = pd.read_csv('../Data/20200511.csv') #read the csv to csv_data
-    csv_data.to_sql('political_ads', db.engine) #write the pandas df to postgres df
+    db.create_all()
+    csv_data = pd.read_csv('../Data/20200514.csv') #read the csv to csv_data
+    csv_data.to_sql('political_ads', db.engine) #write the pandas df to postgres
 
     return render_template("index.html")
 
@@ -71,7 +79,8 @@ def visualization():
 def api_response():
     #query database and return list of lists with results
     results = db.session.query(political_ads.AdID, political_ads.AdURL, political_ads.AdText, political_ads.HostedPage,\
-        political_ads.Impressions, political_ads.Currency, political_ads.AdSpending).all()
+        political_ads.Impressions, political_ads.Currency, political_ads.AdSpending, political_ads.toxicity, political_ads.insult, \
+        political_ads.positivity).all()
     Ad_ID = [result[0] for result in results]
     Ad_URL = [result[1] for result in results]
     Ad_Text = [result[2] for result in results]
@@ -93,21 +102,6 @@ def api_response():
 
     return jsonify(ad_data) #return 
     
-
-#route that querries db
-@app.route("/querryDB", methods=["GET", "POST"])
-def send():
-    if request.method == "POST":
-        name = request.form["petName"]
-        lat = request.form["petLat"]
-        lon = request.form["petLon"]
-
-        pet = Pet(name=name, lat=lat, lon=lon)
-        db.session.add(pet)
-        db.session.commit()
-        return redirect("/", code=302)
-
-    return render_template("form.html")
 
 
 
