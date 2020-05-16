@@ -1,6 +1,5 @@
 # dependencies
 import pandas as pd
-import ast
 import json
 from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt

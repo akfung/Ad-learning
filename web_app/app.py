@@ -7,23 +7,23 @@ from flask import (
     request,
     redirect)
 
-from process_for_JSON import top_words, spending_values, impressions_values #pandas data processing functions for API
+from .process_for_JSON import top_words, spending_values, impressions_values #pandas data processing functions for API
 
 from flask_sqlalchemy import SQLAlchemy
-import ads_api #module for calling the facebook ads library API
+from .ads_api import fb_ad_api #module for calling the facebook ads library API
 
 #flask setup
 app = Flask(__name__)
 
 #set different database depending on dev or heroku database
-ENV = 'dev'
+ENV = 'heroku'
 
 if ENV == 'dev':
     app.debug = True
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:firefox@localhost/ad_learning'
 else:
     app.debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://rtecpnstgntqdo:38fb349af874ac157315e76e5af370df1c34b8afd280dfdf654768d68be75955@ec2-54-175-117-212.compute-1.amazonaws.com:5432/d3a8c7nhlm3gch'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://nkiddhmjdoixeq:3fc3f96ebda80d3c86b33a03de146c6d2d334adc6582772081e2e2a70c2e2814@ec2-52-71-55-81.compute-1.amazonaws.com:5432/d7jg23nlfme3nj'
 
 #database setup
 db = SQLAlchemy(app)
@@ -60,12 +60,13 @@ class political_ads(db.Model):
         self.positivity = positivity
 
 
-# create route that renders index.html template
+# create route that renders index.html templates
 @app.route("/")
 def home():
     #on load clear previous tables and populate the database with some ad results
     db.drop_all()
-    csv_data = pd.read_csv('https://ad-learning.s3-us-west-1.amazonaws.com/20200514.csv') #read the csv to csv_data
+    csv_data = pd.read_csv("https://ad-learning.s3-us-west-1.amazonaws.com/20200514.csv") #read the csv to csv_data
+
     csv_data.to_sql('political_ads', db.engine) #write the pandas df to postgres
 
     return render_template("index.html")
@@ -81,18 +82,11 @@ def cloud():
 
 
 # set up responding to api requests to postgres server
-@app.route("/api/ads")
+@app.route("/api/ads", methods=['GET', 'POST'])
 def api_response():
     #query database and return list of lists with results
     results = db.session.query(political_ads.AdText, political_ads.Impressions, political_ads.AdSpending,\
         political_ads.toxicity, political_ads.insult, political_ads.positivity).all()
-    #return 
-    Ad_Text = [result[0] for result in results]
-    Impressions = [result[1] for result in results]
-    Spending = [result[2] for result in results]
-    toxicity = [result[3] for result in results]
-    insult = [result[4] for result in results]
-    positivity = [result[5] for result in results]
 
     #use query results w/ list interpretation to generate df
     ad_df = pd.DataFrame({
