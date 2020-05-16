@@ -60,7 +60,7 @@ class political_ads(db.Model):
         self.positivity = positivity
 
 
-# create route that renders index.html template
+# create route that renders index.html templates
 @app.route("/")
 def home():
     #on load clear previous tables and populate the database with some ad results
