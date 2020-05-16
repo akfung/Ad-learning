@@ -1,7 +1,7 @@
 #dependencies
 import requests
 import pandas as pd
-from config import fb_key
+from .config import fb_key
 import numpy as np
 #set attributes to search for and pull
 ad_attributes = ['id', 'ad_snapshot_url', 'ad_creative_body', 'page_name', 'demographic_distribution', 'impressions', 'currency', 'spend']

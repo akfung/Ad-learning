@@ -86,13 +86,6 @@ def api_response():
     #query database and return list of lists with results
     results = db.session.query(political_ads.AdText, political_ads.Impressions, political_ads.AdSpending,\
         political_ads.toxicity, political_ads.insult, political_ads.positivity).all()
-    #return 
-    Ad_Text = [result[0] for result in results]
-    Impressions = [result[1] for result in results]
-    Spending = [result[2] for result in results]
-    toxicity = [result[3] for result in results]
-    insult = [result[4] for result in results]
-    positivity = [result[5] for result in results]
 
     #use query results w/ list interpretation to generate df
     ad_df = pd.DataFrame({
