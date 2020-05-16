@@ -14,6 +14,7 @@ flask-sqlalchemy = "*"
 pandas = "*"
 wordcloud = "*"
 numpy = "*"
+requests = "*"
 
 [requires]
 python_version = "3.6.2"
