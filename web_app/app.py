@@ -65,7 +65,8 @@ class political_ads(db.Model):
 def home():
     #on load clear previous tables and populate the database with some ad results
     db.drop_all()
-    csv_data = pd.read_csv('../Data/20200514.csv') #read the csv to csv_data
+    csv_path = os.path.join("..", "Data", "20200514.csv")
+    csv_data = pd.read_csv(csv_path) #read the csv to csv_data
     csv_data.to_sql('political_ads', db.engine) #write the pandas df to postgres
 
     return render_template("index.html")
