@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title>Politial Ad Visualizations</title>
+    <title>Politial Ad Word Clouds</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
 
@@ -60,27 +60,34 @@
     <main role="main">
 
       <section class="jumbotron text-center">
-        <div class="container">
-          <h1>Ad Text Metrics</h1>
-          <!-- dropdown -->
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        <div class="container-fluid">
 
-          <!-- first row of charts -->
-          <div class='row'>
-            <div id = 'Impressions' class = 'd-flex justify-content-center col-md-10'></div>
+            <!-- first row of images -->
+            <div class='row d-flex justify-content-center'>
+            <h2>Most Common Among All Ads</h2>
+            <img src="{{ url_for('static', filename='img/general.jpg') }}" height='800' width = '1200' class="rounded mx-auto d-block mb-5">
 
-          </div>
-          <!-- second row of charts -->
-          <div class = 'row'>
-            <div id = 'spending' class = 'd-flex justify-content-center col-md-10'></div>
+            </div>
+            <!-- second row of images -->
+            <div class='row d-flex justify-content-center'>
+                <h2>Most Common Among Ads Labeled as Insulting</h2>
+                <img src="{{ url_for('static', filename='img/insult.jpg') }}" height='800' width = '1200' class="rounded mx-auto d-block mb-5">
+    
+            </div>
 
-          </div>
-          <!-- third row of charts -->
-          <div class = 'row'>
-            <div id = 'TopWords' class = 'd-flex justify-content-center col-md-10'></div>
+            <!-- third row of images -->
+            <div class='row d-flex justify-content-center'>
+                <h2>Most Common Among Ads Labeled as Positive</h2>
+                <img src="{{ url_for('static', filename='img/positivity.jpg') }}" height='800' width = '1200' class="rounded mx-auto d-block mb-5">
+    
+            </div>
 
-          </div>
-          <script src="{{ url_for('static', filename='js/fbVisualization.js') }}"></script>
+            <!-- fourth row of images -->
+            <div class='row d-flex justify-content-center'>
+                <h2>Most Common Among Ads Labeled as Toxic</h2>
+                <img src="{{ url_for('static', filename='img/toxicity.jpg') }}" height='800' width = '1200' class="rounded mx-auto d-block mb-5">
+    
+            </div>
           
       </section>
 

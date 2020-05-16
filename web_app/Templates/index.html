@@ -42,9 +42,9 @@
       </div>
       <div class="navbar navbar-dark bg-dark shadow-sm">
         <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
+          <a href="/" class="navbar-brand d-flex align-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-            <strong>Album</strong>
+            <strong>Home</strong>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -57,13 +57,12 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1>Album example</h1>
+          <h1>Digital Political Advertising</h1>
           <p class="lead text-muted">Since the 2016 election, the relevance and impact of social media advertising on politics has become
             more obvious to the public. This website was created in an effort to analyze the features of political ads on Facebook's 
             social media platforms as made available through their Ad Library API.</p>
           <p>
-            <a href="/visualization" class="btn btn-primary my-2">Main call to action</a>
-            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+            <a href="/visualization" class="btn btn-primary my-2">Data Visualizations</a>
           </p>
         </div>
       </section>
@@ -74,141 +73,46 @@
           <div class="row">
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                <img height='100' width='100' src='https://vignette.wikia.nocookie.net/spongebob/images/1/16/Krusty_Krab_Pizza.jpg/revision/latest?cb=20181224144909'>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSsPMI1OiXF4oe7Oq-t1SoKnKGsOBNb_P8dNK41FNOtd7z9s_5g&usqp=CAU" height = '100' width = '150' class = 'm-4'>
                 <div class="card-body">
-                  <p class="card-text">Analysis Flowchart</p>
+                  <p class="card-text">Data Visualizations</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button onclick = "location.href='/visualization'" type="button" class="btn btn-sm btn-outline-secondary">View
+                      </button>
                     </div>
-                    <small class="text-muted">9 mins</small>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 justify-content-center">
               <div class="card mb-4 shadow-sm">
-                placeholder
+                <img src="{{ url_for('static', filename='img/toxicity.jpg') }}" height = '100' width = '150' class = 'm-4'>
                 <div class="card-body">
-                  <p class="card-text">Facebook Ad Data</p>
+                  <p class="card-text">Word Clouds</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button href="/visualization" type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button onclick = "location.href='/wordCloud'" href="/visualization" type="button" class="btn btn-sm btn-outline-secondary">View</button>
                     </div>
-                    <small class="text-muted">9 mins</small>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 justify-content-center">
               <div class="card mb-4 shadow-sm">
-                placeholder
+                <img src="data:image/jpeg;base64,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" height = '100' width = '150' class = 'm-4'>
                 <div class="card-body">
-                  <p class="card-text">Ad analysis</p>
+                  <p class="card-text">View the Facebook Ad-Library Tool</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button onclick = "location.href='https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=US&impression_search_field=has_impressions_lifetime'" type="button" class="btn btn-sm btn-outline-secondary">View</button>
                     </div>
-                    <small class="text-muted">9 mins</small>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                placeholder
-                <div class="card-body">
-                  <p class="card-text">Embedding Diagram</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                placeholder
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                placeholder
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                placeholder
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                placeholder
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                placeholder
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>

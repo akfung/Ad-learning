@@ -75,6 +75,10 @@ def home():
 def visualization():
     return render_template("ad_visualizations.html")
 
+@app.route("/wordCloud")
+def cloud():
+    return render_template("ad_word_clouds.html")
+
 
 # set up responding to api requests to postgres server
 @app.route("/api/ads")
@@ -105,8 +109,8 @@ def api_response():
 
     #create dictionary with processed data dictionaries
     ad_data = {
-        "topWords" : top_words(ad_df, unique_ad_df),
-        "topWordsUnique" : top_words(ad_df, unique_ad_df, unique=True),
+        "TopWords" : top_words(ad_df, unique_ad_df),
+        "TopWordsUnique" : top_words(ad_df, unique_ad_df, unique=True),
         "spending" : spending_values(ad_df, unique_ad_df),
         "spendingUnique" : spending_values(ad_df, unique_ad_df, unique=True),
         "Impressions" : impressions_values(ad_df, unique_ad_df),

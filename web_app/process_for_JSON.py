@@ -78,7 +78,11 @@ def spending_values(ad_df, unique_ad_df, unique=False):
         spending_key = f'{feature}spending'
         if unique == True:
             spending_key = f'{feature}spendingUnique'
-        
+
+        # add $ to the start of each dollar value
+        for key, value in spending_dict.items():
+            spending_dict[key] = "$" + str(value)
+
         output_to_js.update({spending_key: spending_dict})
     return output_to_js
 
