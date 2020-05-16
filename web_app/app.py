@@ -7,7 +7,7 @@ from flask import (
     request,
     redirect)
 
-from process_for_JSON import top_words, spending_values, impressions_values #pandas data processing functions for API
+from .process_for_JSON import top_words, spending_values, impressions_values #pandas data processing functions for API
 
 from flask_sqlalchemy import SQLAlchemy
 import ads_api #module for calling the facebook ads library API
