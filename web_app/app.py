@@ -83,7 +83,6 @@ def cloud():
 # set up responding to api requests to postgres server
 @app.route("/api/ads", methods=['GET', 'POST'])
 def api_response():
-    if request
     #query database and return list of lists with results
     results = db.session.query(political_ads.AdText, political_ads.Impressions, political_ads.AdSpending,\
         political_ads.toxicity, political_ads.insult, political_ads.positivity).all()
