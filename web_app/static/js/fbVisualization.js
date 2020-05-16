@@ -37,7 +37,7 @@ function generalAdData(){
                 yaxisTitle = 'Number of Ads';
                 xaxisScale = 'log';
                 xaxisTitle = 'Number of Impressions';
-                graphTitle = `Impressions of Top 10 Political Ads`;
+                graphTitle = `Ad Frequency Per Impression Group`;
             }
             
             else if(category === 'spending'){
@@ -45,7 +45,7 @@ function generalAdData(){
                 yaxisTitle = 'Number of Ads';
                 xaxisScale = 'log';
                 xaxisTitle = 'USD Spent';
-                graphTitle = `Spending on Top 10 Political Ads`;
+                graphTitle = `Ad Frequency Per Ad Spending`;
             }
 
             else if(category === 'TopWords'){
