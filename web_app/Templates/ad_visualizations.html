@@ -17,8 +17,8 @@
     <link href="{{ url_for('static', filename='CSS/styles.css') }}" rel="stylesheet">
     <!-- D3 -->
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <!-- load some static js files for data -->
-    <script src="{{ url_for('static', filename='js/topwords.js') }}"></script>
+    <!-- plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   </head>
 
   <body>
@@ -61,7 +61,22 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1>Album example</h1>
+          <h1>Ad Text Metrics</h1>
+          <!-- first row of charts -->
+          <div class='row'>
+            <div id = 'Impressions' class = 'col-md-6'></div>
+            <div id = 'ImpressionsUnique' class = 'col-md-6'></div>
+          </div>
+          <!-- second row of charts -->
+          <div class = 'row'>
+            <div id = 'spending' class = 'col-md-6'></div>
+            <div id = 'spendingUnique' class = 'col-md-6'></div>
+          </div>
+          <!-- third row of charts -->
+          <div class = 'row'>
+            <div id = 'topWords' class = 'col-md-6'></div>
+            <div id = 'topWordsUnique' class = 'col-md-6'></div>
+          </div>
           <p class="lead text-muted">Primary Visualization Here</p>
           <script src="{{ url_for('static', filename='js/fbVisualization.js') }}"></script>
           <p>

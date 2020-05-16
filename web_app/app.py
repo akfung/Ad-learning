@@ -7,6 +7,8 @@ from flask import (
     request,
     redirect)
 
+from process_for_JSON import top_words, spending_values, impressions_values #pandas data processing functions for API
+
 from flask_sqlalchemy import SQLAlchemy
 import ads_api #module for calling the facebook ads library API
 
@@ -25,6 +27,7 @@ else:
 
 #database setup
 db = SQLAlchemy(app)
+db.drop_all()
 
 #class object for political_ads table
 class political_ads(db.Model):
@@ -62,7 +65,6 @@ class political_ads(db.Model):
 def home():
     #on load clear previous tables and populate the database with some ad results
     db.drop_all()
-    db.create_all()
     csv_data = pd.read_csv('../Data/20200514.csv') #read the csv to csv_data
     csv_data.to_sql('political_ads', db.engine) #write the pandas df to postgres
 
@@ -78,32 +80,41 @@ def visualization():
 @app.route("/api/ads")
 def api_response():
     #query database and return list of lists with results
-    results = db.session.query(political_ads.AdID, political_ads.AdURL, political_ads.AdText, political_ads.HostedPage,\
-        political_ads.Impressions, political_ads.Currency, political_ads.AdSpending, political_ads.toxicity, political_ads.insult, \
-        political_ads.positivity).all()
-    Ad_ID = [result[0] for result in results]
-    Ad_URL = [result[1] for result in results]
-    Ad_Text = [result[2] for result in results]
-    Hosted_Page = [result[3] for result in results]
-    Impressions = [result[4] for result in results]
-    Currency = [result[5] for result in results]
-    Spending = [result[6] for result in results]
+    results = db.session.query(political_ads.AdText, political_ads.Impressions, political_ads.AdSpending,\
+        political_ads.toxicity, political_ads.insult, political_ads.positivity).all()
+    #return 
+    Ad_Text = [result[0] for result in results]
+    Impressions = [result[1] for result in results]
+    Spending = [result[2] for result in results]
+    toxicity = [result[3] for result in results]
+    insult = [result[4] for result in results]
+    positivity = [result[5] for result in results]
 
-    #the json responde to an API query from app.js, results are already in plotly format
-    ad_data = [{
-        "Ad_ID": Ad_ID,
-        "Ad_URL": Ad_URL,
-        "Ad_Text": Ad_Text,
-        "Hosted_Page": Hosted_Page,
-        "Impressions": Impressions,
-        "Currency": Currency,
-        "Spending": Spending
-    }]
+    #use query results w/ list interpretation to generate df
+    ad_df = pd.DataFrame({
+        'AdText' : [result[0] for result in results],
+        'Impressions' : [result[1] for result in results],
+        'AdSpending' : [result[2] for result in results],
+        'toxicity' : [result[3] for result in results],
+        'insult' : [result[4] for result in results],
+        'positivity' : [result[5] for result in results]
+    })
 
-    return jsonify(ad_data) #return 
+    #df with duplicates dropped
+    unique_ad_df = ad_df.drop_duplicates(subset = 'AdText', keep='first')
+
+    #create dictionary with processed data dictionaries
+    ad_data = {
+        "topWords" : top_words(ad_df, unique_ad_df),
+        "topWordsUnique" : top_words(ad_df, unique_ad_df, unique=True),
+        "spending" : spending_values(ad_df, unique_ad_df),
+        "spendingUnique" : spending_values(ad_df, unique_ad_df, unique=True),
+        "Impressions" : impressions_values(ad_df, unique_ad_df),
+        "ImpressionsUnique" : impressions_values(ad_df, unique_ad_df, unique=True)
+    }
+
+    return jsonify(ad_data) #return the ad_data dict as a json
     
-
-
 
 if __name__ == "__main__":
     app.run()
