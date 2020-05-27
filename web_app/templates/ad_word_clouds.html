@@ -41,9 +41,8 @@
             <div class="col-sm-4 offset-md-1 py-4">
               <h4 class="text-white">Contact</h4>
               <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                <li><a href="#" class="text-white">Like on Facebook</a></li>
-                <li><a href="#" class="text-white">Email me</a></li>
+                <li><a href="https://www.linkedin.com/in/amos-fung-72a265b7/" class="text-white">Linkedin</a></li>
+                <li><a href="https://github.com/akfung" class="text-white">Github</a></li>
               </ul>
             </div>
           </div>
@@ -66,46 +65,29 @@
 
       <section class="jumbotron text-center">
         <div class="container-fluid">
-            <!-- amchart wordcloud -->
-            
-            
-            
-            
+          <!-- selector buttons -->
+          <div class="btn-group my-4" role="group" aria-label="Basic example">
+            <button value="generalTopWords" onClick="answer_click(this)" type="button" class="btn btn-light word-cloud-button">All Ads</button>
+            <button value="insultTopWords" onClick="answer_click(this)" class="btn btn-light word-cloud-button">Insulting Ads</button>
+            <button value="positivityTopWords" onClick="answer_click(this)" type="button" class="btn btn-light word-cloud-button">Positive Ads</button>
+            <button value="toxicityTopWords" onClick="answer_click(this)" type="button" class="btn btn-light word-cloud-button">Toxic Words</button>
+          </div>
 
-            <!-- first row of images -->
-            <div class='row d-flex justify-content-center'>
-            <h2>Most Common Among All Ads</h2>
-            <div id="generalTopWords" class="wordcloud"></div>
-            </div>
-
-            <!-- second row of images -->
-            <div class='row d-flex justify-content-center'>
-                <h2>Most Common Among Ads Labeled as Insulting</h2>
-                <div id="insultTopWords" class="wordcloud"></div>
-            </div>
-
-            <!-- third row of images -->
-            <div class='row d-flex justify-content-center'>
-                <h2>Most Common Among Ads Labeled as Positive</h2>
-                <div id="positivityTopWords" class="wordcloud"></div>
-    
-            </div>
-
-            <!-- fourth row of images -->
-            <div class='row d-flex justify-content-center'>
-                <h2>Most Common Among Ads Labeled as Toxic</h2>
-                <div id="toxicityTopWords" class="wordcloud"></div>
-    
-            </div>
+          <!-- amchart wordcloud -->
+          <div class='row d-flex justify-content-center'>
+            <h2 id="word-cloud-title">Most Common Among All Ads</h2>
+            <div id="wordCloudOutput" class="wordcloud"></div>
+          </div>
+        </div>
           
       </section>
-
     
       </div>
 
     </main>
     <!-- script to draw wordclouds -->
     <script type="text/javascript" src="{{ url_for('static', filename='js/wordcloud.js') }}"></script>
+
     <footer class="text-muted">
       <div class="container">
         <p class="float-right">
