@@ -7,16 +7,14 @@ from flask import (
     request,
     redirect)
 
-from .process_for_JSON import top_words, spending_values, impressions_values #pandas data processing functions for API
-
+from web_app_pkgs import top_words, spending_values, impressions_values
 from flask_sqlalchemy import SQLAlchemy
-from .ads_api import fb_ad_api #module for calling the facebook ads library API
 
 #flask setup
 app = Flask(__name__)
 
 #set different database depending on dev or heroku database
-ENV = 'heroku'
+ENV = 'dev'
 
 if ENV == 'dev':
     app.debug = True
@@ -25,7 +23,7 @@ else:
     app.debug = False
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://nkiddhmjdoixeq:3fc3f96ebda80d3c86b33a03de146c6d2d334adc6582772081e2e2a70c2e2814@ec2-52-71-55-81.compute-1.amazonaws.com:5432/d7jg23nlfme3nj'
 
-#database setup
+#database setup and drop all tables on initialization
 db = SQLAlchemy(app)
 db.drop_all()
 
@@ -44,6 +42,7 @@ class political_ads(db.Model):
     identityAttack = db.Column(db.Integer)
     insult = db.Column(db.Integer)
     positivity = db.Column(db.Integer)
+
     #initialization functions
     def __init__(self, id, Ad_ID, Ad_URL, Ad_Text, Hosted_Page, Impressions, Currency, Ad_Spending):
         self.id = id
@@ -60,15 +59,13 @@ class political_ads(db.Model):
         self.positivity = positivity
 
 
+#on app load populate the database with ad results from csv
+csv_data = pd.read_csv("https://ad-learning.s3-us-west-1.amazonaws.com/20200514.csv") #read the csv to csv_data
+csv_data.to_sql('political_ads', db.engine, if_exists='replace') #write the pandas df to postgres
+
 # create route that renders index.html templates
 @app.route("/")
 def home():
-    #on load clear previous tables and populate the database with some ad results
-    db.drop_all()
-    csv_data = pd.read_csv("https://ad-learning.s3-us-west-1.amazonaws.com/20200514.csv") #read the csv to csv_data
-
-    csv_data.to_sql('political_ads', db.engine) #write the pandas df to postgres
-
     return render_template("index.html")
 
 #route that goes to visualization page
@@ -76,6 +73,7 @@ def home():
 def visualization():
     return render_template("ad_visualizations.html")
 
+#render page for wordclouds
 @app.route("/wordCloud")
 def cloud():
     return render_template("ad_word_clouds.html")
@@ -98,7 +96,7 @@ def api_response():
         'positivity' : [result[5] for result in results]
     })
 
-    #df with duplicates dropped
+    #df with duplicates dropped. deprecated
     unique_ad_df = ad_df.drop_duplicates(subset = 'AdText', keep='first')
 
     #create dictionary with processed data dictionaries

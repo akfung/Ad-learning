@@ -62,23 +62,37 @@
       <section class="jumbotron text-center">
         <div class="container">
           <h1>Ad Text Metrics</h1>
-          <!-- dropdown -->
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          <p>
+            The data below shows a comparison of impression and spending metrics between ads classified by the deep RNN as 
+            insulting, positive, or toxic. The full dataset is also shown for comparison.
+          </p>
 
           <!-- first row of charts -->
-          <div class='row'>
+          <div class='row my-5 d-flex justify-content-center'>
+            <h3>Ad Frequency vs Number of Impressions</h3>
             <div id = 'Impressions' class = 'd-flex justify-content-center col-md-10'></div>
 
           </div>
           <!-- second row of charts -->
-          <div class = 'row'>
+          <div class = 'row my-5 d-flex justify-content-center'>
+            <h3>Ad Frequency vs Ad Spending</h3>
             <div id = 'spending' class = 'd-flex justify-content-center col-md-10'></div>
 
           </div>
-          <!-- third row of charts -->
-          <div class = 'row'>
-            <div id = 'TopWords' class = 'd-flex justify-content-center col-md-10'></div>
 
+          
+
+          <!-- third row of charts -->
+          <div class = 'row my-5 d-flex justify-content-center'>
+            <div class = 'my-5'>
+              <p>
+                The 10 most frequently occuring words for each ad group are shown below to give an idea of what words appear
+                in each respective ad group, as well as what words seem to be common accross multiple ad groups.
+              </p>
+            </div>
+            <h3>Top 10 Most Frequent Words in Political Ads</h3>
+            <div id = 'TopWords' class = 'd-flex justify-content-center col-md-10'></div>
+          
           </div>
           <script type="text/javascript" src="{{ url_for('static', filename='js/fbVisualization.js') }}"></script>
           

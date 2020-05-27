@@ -34,7 +34,7 @@ def top_words(ad_df, unique_ad_df, unique=False):
         text = [word for word in text if not word in STOPWORDS]
 
         #use counter to grab most common words
-        count_tuple = Counter(text).most_common(10)
+        count_tuple = Counter(text).most_common(40)
 
         #write counts to dictionary
         count_dict = {}
@@ -70,9 +70,11 @@ def spending_values(ad_df, unique_ad_df, unique=False):
         else:
             spending_series = df.loc[ad_df[feature]==1, 'AdSpending'] #select only entries positive for feature
         
-        
+        totalNoAds = len(spending_series.index)/100; #find the total number of ads
+        spending_series = spending_series.value_counts().apply(lambda x: x/totalNoAds)
+
         # create dict for spending amount categories
-        spending_dict = spending_series.value_counts().sort_values(ascending=False).to_dict()
+        spending_dict = spending_series.sort_values(ascending=False).to_dict()
         
         spending_key = f'{feature}spending'
         if unique == True:
@@ -102,11 +104,13 @@ def impressions_values(ad_df, unique_ad_df, unique=False):
         if feature == 'general': #select the whole df for the 'general' feature
             impressions_series = df['Impressions']
         else:
-            impressions_series = df.loc[ad_df[feature]==1, 'Impressions'] #select only entries positive for feature
+            impressions_series = df.loc[ad_df[feature]==1, 'Impressions'] #select only impressions for entries positive for feature
         
-        
+        totalNoAds = len(impressions_series.index)/100; #find the total number of ads
+        impressions_series = impressions_series.value_counts().apply(lambda x: x/totalNoAds)
+
         # create dict for spending amount categories
-        impressions_dict = impressions_series.value_counts().sort_values(ascending=False).to_dict()
+        impressions_dict = impressions_series.sort_values(ascending=False).to_dict()
         
         impressions_key = f'{feature}Impressions'
         if unique == True:
