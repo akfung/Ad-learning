@@ -31,7 +31,7 @@ class fb_ad_api:
         self.base_url = 'https://graph.facebook.com/v6.0/ads_archive?' #set base API URL
         self.ad_attributes = ['id', 'ad_snapshot_url', 'ad_creative_body', 'page_name', 'demographic_distribution', 'impressions', 'currency', 'spend']
     
-    def call_api(self, page_limit=2): #function to call api. page limit sets max num of pages to pull data from
+    def call_api(self, page_limit=10): #function to call api. page limit sets max num of pages to pull data from
         page_counter = 1
         url = self.base_url
 

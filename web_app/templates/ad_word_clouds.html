@@ -17,6 +17,11 @@
     <link href="{{ url_for('static', filename='CSS/styles.css') }}" rel="stylesheet">
     <!-- D3 -->
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- amCharts -->
+    <script src="//www.amcharts.com/lib/4/core.js"></script>
+    <script src="//www.amcharts.com/lib/4/charts.js"></script>
+    <script src="//www.amcharts.com/lib/4/plugins/wordCloud.js"></script>
+    <script src="//www.amcharts.com/lib/4/themes/animated.js"></script>
     <!-- plotly -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   </head>
@@ -61,31 +66,35 @@
 
       <section class="jumbotron text-center">
         <div class="container-fluid">
+            <!-- amchart wordcloud -->
+            
+            
+            
+            
 
             <!-- first row of images -->
             <div class='row d-flex justify-content-center'>
             <h2>Most Common Among All Ads</h2>
-            <img src="{{ url_for('static', filename='img/general.jpg') }}" height='800' width = '1200' class="rounded mx-auto d-block mb-5">
-
+            <div id="generalTopWords" class="wordcloud"></div>
             </div>
+
             <!-- second row of images -->
             <div class='row d-flex justify-content-center'>
                 <h2>Most Common Among Ads Labeled as Insulting</h2>
-                <img src="{{ url_for('static', filename='img/insult.jpg') }}" height='800' width = '1200' class="rounded mx-auto d-block mb-5">
-    
+                <div id="insultTopWords" class="wordcloud"></div>
             </div>
 
             <!-- third row of images -->
             <div class='row d-flex justify-content-center'>
                 <h2>Most Common Among Ads Labeled as Positive</h2>
-                <img src="{{ url_for('static', filename='img/positivity.jpg') }}" height='800' width = '1200' class="rounded mx-auto d-block mb-5">
+                <div id="positivityTopWords" class="wordcloud"></div>
     
             </div>
 
             <!-- fourth row of images -->
             <div class='row d-flex justify-content-center'>
                 <h2>Most Common Among Ads Labeled as Toxic</h2>
-                <img src="{{ url_for('static', filename='img/toxicity.jpg') }}" height='800' width = '1200' class="rounded mx-auto d-block mb-5">
+                <div id="toxicityTopWords" class="wordcloud"></div>
     
             </div>
           
@@ -95,7 +104,8 @@
       </div>
 
     </main>
-
+    <!-- script to draw wordclouds -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/wordcloud.js') }}"></script>
     <footer class="text-muted">
       <div class="container">
         <p class="float-right">
