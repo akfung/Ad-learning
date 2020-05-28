@@ -32,9 +32,8 @@
             <div class="col-sm-4 offset-md-1 py-4">
               <h4 class="text-white">Contact</h4>
               <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                <li><a href="#" class="text-white">Like on Facebook</a></li>
-                <li><a href="#" class="text-white">Email me</a></li>
+                <li><a href="https://www.linkedin.com/in/amos-fung-72a265b7/" class="text-white">Linkedin</a></li>
+                <li><a href="https://github.com/akfung" class="text-white">Github</a></li>
               </ul>
             </div>
           </div>
@@ -43,7 +42,10 @@
       <div class="navbar navbar-dark bg-dark shadow-sm">
         <div class="container d-flex justify-content-between">
           <a href="/" class="navbar-brand d-flex align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <svg class="bi bi-house-door" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/>
+            <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+            </svg>
             <strong>Home</strong>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,9 +63,6 @@
           <p class="lead text-muted">Since the 2016 election, the relevance and impact of social media advertising on politics has become
             more obvious to the public. This website was created in an effort to analyze the features of political ads on Facebook's 
             social media platforms as made available through their Ad Library API.</p>
-          <p>
-            <a href="/visualization" class="btn btn-primary my-2">Data Visualizations</a>
-          </p>
         </div>
       </section>
 
@@ -75,7 +74,7 @@
               <div class="card mb-4 shadow-sm">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSsPMI1OiXF4oe7Oq-t1SoKnKGsOBNb_P8dNK41FNOtd7z9s_5g&usqp=CAU" height = '100' width = '150' class = 'm-4'>
                 <div class="card-body">
-                  <p class="card-text">Data Visualizations</p>
+                  <p class="card-text">Ad Text Metrics</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button onclick = "location.href='/visualization'" type="button" class="btn btn-sm btn-outline-secondary">View
@@ -87,9 +86,9 @@
             </div>
             <div class="col-md-4 justify-content-center">
               <div class="card mb-4 shadow-sm">
-                <img src="{{ url_for('static', filename='img/general.jpg') }}" height = '100' width = '150' class = 'm-4'>
+                <img src="https://miro.medium.com/proxy/1*gsushK-1kjqsSxPWbbkvPA.png" height = '100' width = '150' class = 'm-4'>
                 <div class="card-body">
-                  <p class="card-text">Word Clouds</p>
+                  <p class="card-text">Top Words</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button onclick = "location.href='/wordCloud'" href="/visualization" type="button" class="btn btn-sm btn-outline-secondary">View</button>
