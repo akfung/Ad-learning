@@ -25,7 +25,6 @@ else:
 
 #database setup and drop all tables on initialization
 db = SQLAlchemy(app)
-db.drop_all()
 db.create_all()
 
 #class object for political_ads table
