@@ -25,12 +25,7 @@ else:
 
 #database setup and drop all tables on initialization
 db = SQLAlchemy(app)
-try:
-    db.drop_all()
-except:
-    print("SQL drop error")
-finally:
-    db.create_all()
+
 
 
 #class object for political_ads table
@@ -64,6 +59,13 @@ class political_ads(db.Model):
         self.insult = insult
         self.positivity = positivity
 
+# drop existing tables and recreate
+try:
+    db.drop_all()
+except:
+    print("SQL drop error")
+finally:
+    db.create_all()
 
 #on app load populate the database with ad results from csv
 csv_data = pd.read_csv("https://ad-learning.s3-us-west-1.amazonaws.com/20200514.csv") #read the csv to csv_data
