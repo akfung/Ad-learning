@@ -26,11 +26,9 @@ else:
 #database setup and drop all tables on initialization
 db = SQLAlchemy(app)
 try:
-    db.drop_all()
-except:
-    print("SQL drop error")
-finally:
     db.create_all()
+except:
+    print("SQL create error")
 
 #class object for political_ads table
 class political_ads(db.Model):
