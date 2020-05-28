@@ -14,7 +14,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 #set different database depending on dev or heroku database
-ENV = 'dev'
+ENV = 'heroku'
 
 if ENV == 'dev':
     app.debug = True

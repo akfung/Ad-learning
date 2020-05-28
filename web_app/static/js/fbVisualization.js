@@ -1,6 +1,6 @@
 
 // lists of categories and features to refer back to
-let categories = ['Impressions', 'spending', 'TopWords'];        
+let categories = ['Impressions', 'spending'];        
 let features = ['general', 'insult', 'positivity', 'toxicity'];
 
 
