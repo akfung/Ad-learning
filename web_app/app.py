@@ -31,7 +31,6 @@ db = SQLAlchemy(app)
 #class object for political_ads table
 class political_ads(db.Model):
     __tablename__ = 'political_ads'
-    dummy_id = db.Column(db.Integer, primary_key=True)
     id = db.Column(db.Integer)
     AdID = db.Column(db.Integer)
     AdURL = db.Column(db.String(200))
@@ -44,6 +43,7 @@ class political_ads(db.Model):
     identityAttack = db.Column(db.Integer)
     insult = db.Column(db.Integer)
     positivity = db.Column(db.Integer)
+    dummy_id = db.Column(db.Integer, primary_key=True)
 
     #initialization functions
     def __init__(self, id, Ad_ID, Ad_URL, Ad_Text, Hosted_Page, Impressions, Currency, Ad_Spending):
@@ -59,6 +59,7 @@ class political_ads(db.Model):
         self.identityAttack = identityAttack
         self.insult = insult
         self.positivity = positivity
+        self.dummy_id = dummy_id
 
 # drop existing tables and recreate
 try:
