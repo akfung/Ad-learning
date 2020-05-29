@@ -31,6 +31,7 @@ db = SQLAlchemy(app)
 #class object for political_ads table
 class political_ads(db.Model):
     __tablename__ = 'political_ads'
+    dummy_id = db.Column(db.Integer, primary_key=True)
     id = db.Column(db.Integer)
     AdID = db.Column(db.Integer)
     AdURL = db.Column(db.String(200))
