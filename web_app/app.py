@@ -66,8 +66,8 @@ try:
     db.drop_all()
 except:
     print("SQL drop error")
-finally:
-    db.create_all()
+# finally:
+#     db.create_all()
 
 #on app load populate the database with ad results from csv
 csv_data = pd.read_csv("https://ad-learning.s3-us-west-1.amazonaws.com/20200528.csv") #read the csv to csv_data
