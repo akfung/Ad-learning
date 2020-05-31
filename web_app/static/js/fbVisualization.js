@@ -10,8 +10,6 @@ let features = ['general', 'insult', 'positivity', 'toxicity'];
 function generalAdData(){
     let url = '/api/ads';
     d3.json(url).then(function(response) {
-
-        console.log(response);
         
         let feature = features[0];
         d3.select('#dropdownMenuButton').text(feature);
