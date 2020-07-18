@@ -7,14 +7,14 @@ from flask import (
     request,
     redirect)
 
-from .web_app_pkgs import top_words, spending_values, impressions_values
+from web_app_pkgs import top_words, spending_values, impressions_values
 from flask_sqlalchemy import SQLAlchemy
 
 #flask setup
 app = Flask(__name__)
 
 #set different database depending on dev or heroku database
-ENV = 'heroku'
+ENV = 'dev'
 
 if ENV == 'dev':
     app.debug = True
@@ -25,8 +25,6 @@ else:
 
 #database setup and drop all tables on initialization
 db = SQLAlchemy(app)
-
-
 
 #class object for political_ads table
 class political_ads(db.Model):
@@ -61,17 +59,17 @@ class political_ads(db.Model):
         self.positivity = positivity
         self.dummy_id = dummy_id
 
-# drop existing tables and recreate
-try:
-    db.drop_all()
-except:
-    print("SQL drop error")
-# finally:
-#     db.create_all()
+# # drop existing tables and recreate
+# try:
+#     db.drop_all()
+# except:
+#     print("SQL drop error")
+# # finally:
+# #     db.create_all()
 
 #on app load populate the database with ad results from csv
-csv_data = pd.read_csv("https://ad-learning.s3-us-west-1.amazonaws.com/20200528.csv") #read the csv to csv_data
-csv_data.to_sql('political_ads', db.engine, if_exists='replace') #write the pandas df to postgres
+# csv_data = pd.read_csv("https://ad-learning.s3-us-west-1.amazonaws.com/20200528.csv") #read the csv to csv_data
+# csv_data.to_sql('political_ads', db.engine, if_exists='replace') #write the pandas df to postgres
 
 # create route that renders index.html templates
 @app.route("/")
