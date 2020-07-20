@@ -39,14 +39,21 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">About</h4>
+              <h4 class="text-white">About this Project</h4>
               <p class="text-muted">
                 This website was created as a final project for a Data Analytics
-                bootcamp at the UC Irvine's Division of Continuing Eduction.
+                bootcamp at the UC Irvine's Division of Continuing Eduction and
+                is hosted via Heroku. Data gathered added to PostgreSQL database
+                using Pandas, psycopg2, and Flask-SQLAlchemy. Backend for
+                database querries and API endpoint handled by Flask. Ad text
+                classified by a Tensorflow keras recurrent neural network with
+                LSTM layer trained on the imdb_reviews/plain_text dataset and
+                civil_comments dataset. Impression and spending data visualized
+                with Plotly.js, wordclouds visualized with amCharts4.
               </p>
             </div>
             <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Contact</h4>
+              <h4 class="text-white">Contact Me</h4>
               <ul class="list-unstyled">
                 <li>
                   <a
@@ -123,7 +130,8 @@
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSsPMI1OiXF4oe7Oq-t1SoKnKGsOBNb_P8dNK41FNOtd7z9s_5g&usqp=CAU"
+                  src="static/img/visualization_thumbnail.png"
+                  onclick="location.href='/visualization'"
                   height="100"
                   width="150"
                   class="m-4"
@@ -132,7 +140,7 @@
                   <h4 class="card-text">Ad Text Metrics</h4>
                   <p>
                     Comparisons histograms for spending per ad and impressions
-                    per ad. Ads are filterable by RNN labeled group.
+                    per ad. Ads are filterable by RNN labeled group
                   </p>
                   <div
                     class="d-flex justify-content-between align-items-center"
@@ -153,7 +161,8 @@
             <div class="col-md-4 justify-content-center">
               <div class="card mb-4 shadow-sm">
                 <img
-                  src="https://miro.medium.com/proxy/1*gsushK-1kjqsSxPWbbkvPA.png"
+                  src="static/img/wordcloud_thumbnail.png"
+                  onclick="location.href='/wordCloud'"
                   height="100"
                   width="150"
                   class="m-4"
@@ -162,7 +171,7 @@
                   <h4 class="card-text">Top Words</h4>
                   <p>
                     Word cloud visualizations of the most common words per RNN
-                    labeled ad group.
+                    labeled ad group
                   </p>
                   <div
                     class="d-flex justify-content-between align-items-center"
@@ -170,7 +179,6 @@
                     <div class="btn-group">
                       <button
                         onclick="location.href='/wordCloud'"
-                        href="/visualization"
                         type="button"
                         class="btn btn-sm btn-outline-secondary"
                       >
@@ -190,7 +198,11 @@
                   class="m-4"
                 />
                 <div class="card-body">
-                  <h4 class="card-text">View the Facebook Ad-Library Tool</h4>
+                  <h4 class="card-text">Facebook Ad-Library Tool</h4>
+                  <p>
+                    View Facebook's Ad Library tool and search for particular
+                    ads of interest
+                  </p>
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
