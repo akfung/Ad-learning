@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 import pandas as pd
 
 # set different database depending on dev or heroku database
-ENV = 'dev'
+ENV = 'heroku'
 
 if ENV == 'dev':
     engine = create_engine(

@@ -7,14 +7,14 @@ from flask import (
     request,
     redirect)
 
-from web_app_pkgs import top_words, spending_values, impressions_values
+from .web_app_pkgs import top_words, spending_values, impressions_values
 from flask_sqlalchemy import SQLAlchemy
 
 # flask setup
 app = Flask(__name__)
 
 # set different database depending on dev or heroku database
-ENV = 'dev'
+ENV = 'heroku'
 
 if ENV == 'dev':
     app.debug = True
